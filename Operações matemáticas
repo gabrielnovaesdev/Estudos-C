@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, soma, subtrair, produto, divisao, resto;
+
+    printf("\nDigite o primeiro numero: ");
+    scanf("%i", &num1);
+    printf("\nDigite o segundo: ");
+    scanf("%i", &num2);
+    printf("\nDigite o multiplicador que fará a multiplicao e a divisao com o primeiro numero: ");
+    scanf("%i", &num3);
+
+    soma = num1 + num2;
+    subtrair = num1 - num2;
+    produto = num1 * num3;
+
+
+    printf("\nA soma eh: %i", soma);
+    printf("\nA subtracao eh: %i", subtrair);
+    printf("\nO produto eh: %i", produto);
+    
+    
+    if (num3 != 0) {
+        divisao = num1 / num3;
+        resto = num1 % num3;
+
+        printf("\nA divisao eh: %i", divisao);
+        printf("\nO resto da divisao eh: %i", resto);
+    } else {
+        printf("\nNão é possível dividir por zero.");
+    }
+
+    return 0;
+}
