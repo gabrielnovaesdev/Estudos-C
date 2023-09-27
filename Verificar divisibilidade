@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int num, divisor, resultado;
+
+    printf("\nDigite o primeiro numero: ");
+    scanf("%i", &num);
+    printf("\nDigite o divisor: ");
+    scanf("%i", &divisor);
+    
+    
+    if (num % divisor == 0) {
+        printf("\nO numero eh divisivel");
+    }
+    else {
+        printf("\nO número nao eh divisivel");
+    }
+
+    return 0;
+}
