@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int num1, resultado;
+    
+    printf("\nDigite um numero para gerar a tabuada:  ");
+    scanf("%d", &num1);
+    
+    for(int tabuada = 1; tabuada <= 10; tabuada++){
+    
+    resultado = num1 * tabuada;
+    
+    printf("%d x %d = %d\n", num1, tabuada, resultado);
+    }
+
+
+    return 0;
+}
