@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+
+using namespace std;
+
+typedef struct{
+	char nome[10];
+	int idade;
+	float nota[2], media;
+} Unicarioca;
+
+Unicarioca aluno[3];
+float menorMedia;
+int piorAluno;
+
+main(){
+	for (int i=0;i<3;i++){
+		cout<<"Digite o nome: ";	cin>>aluno[i].nome;
+		cout<<"Idade: ";			cin>>aluno[i].idade;
+		for (int j=0; j<2; j++){
+			cout<<"Nota: ";			cin>>aluno[i].nota[j];
+		}
+		
+		aluno[i].media = (aluno[i].nota[0]+aluno[i].nota[1])/2;
+	}
+	for (int i=0;i<3;i++){
+		if (aluno[i].media >=7)
+		cout<<aluno[i].nome<<" tem media "<<aluno[i].media<<endl;
+	}
+	for (int k=0;k<3;k++){
+		if (k==0) {
+			menorMedia = aluno[k].media;
+			piorAluno = 0;
+		} else {
+			if (aluno[k].media < menorMedia) {
+				menorMedia = aluno[k].media;
+				piorAluno = k;
+			}
+		}
+	}
+	cout<<"Aluno com a pior media:"<<endl;
+	cout<<"Nome: "<<aluno[piorAluno].nome<<endl;
+	cout<<"Idade: "<<aluno[piorAluno].idade<<endl;
+	cout<<"Nota 1: "<<aluno[piorAluno].nota[0]<<endl;
+	cout<<"Nota 2: "<<aluno[piorAluno].nota[1]<<endl;
+	cout<<"Media: "<<aluno[piorAluno].media<<endl;
+	
+}
